@@ -1,6 +1,3 @@
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 public class Perro {
     /*
     Para una institución que adopta perros se requiere tener de ellos: si están en adopción o
@@ -49,7 +46,10 @@ lado, se puede enviar a adopción a un perro si no está lastimado y su peso es 
     public void setAnoDeNacimiento(int nuevoAno){
         anoDeNacimiento=nuevoAno;
     }
-
+    public void setEstaEnAdoption(){
+        this.estaEnAdopcion=true;
+    }
+    public void setEstaLastimado(Boolean valor){ this.estaLastimado=valor; }
 
    public int consultarEdad(int anoActual){
             return anoActual-anoDeNacimiento;
@@ -69,7 +69,5 @@ lado, se puede enviar a adopción a un perro si no está lastimado y su peso es 
         }
         return "El perrito NO esta en condiciones de ser adoptado :(";
     }
-    public void setEstaEnAdopcion(){
-        this.estaEnAdopcion=true;
-    }
+
 }
