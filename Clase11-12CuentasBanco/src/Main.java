@@ -1,32 +1,27 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        Cuenta CajaAhorroPEPE = new CajaDeAhorro(90000); // caja de ahorra es una Cuenta, dinamic bylding
+        Cuenta CuentaCorrienteJORGE = new CuentaCorriente(12500,2000);
+        Cuenta ComitenteLUISITO = new CuentaComitente(4000, "abcd1234");
 
-        CajaAhorro ca = new CajaAhorro();
-        ca.setSaldo(100);
-        ca.cobrarIntereses();
-        CuentaCorriente cc = new CuentaCorriente();
-        cc.depositar(5000);
-        cc.setDescubiertoPermitido(1000);
+        CuentaCorrienteJORGE.extraerEfectivo(2500);
+        ((CajaDeAhorro) CajaAhorroPEPE).cobrarIntereses();
+        CajaAhorroPEPE.extraerEfectivo(50000);
 
-        System.out.println(ca.informarSaldo());
-        System.out.println(cc.informarSaldo());
+        ((CuentaCorriente) CuentaCorrienteJORGE).depositar(1500, "Dolar");
+        ((CuentaComitente) ComitenteLUISITO).setClaveCNV("lalala666");
+        ((CuentaComitente) ComitenteLUISITO).extraerEfectivo(3000);
 
-        ArrayList<Cuenta> cuentas= new ArrayList<>();
-        Cuenta cuenta2=new CuentaCorriente();
-        cuenta2.depositar(1000);
 
-        Cuenta cuenta1=new CajaAhorro();
-        cuenta1.depositar(1500);
-        if (cuenta2 instanceof  CuentaCorriente)
-            ((CuentaCorriente)cuenta1).setDescubiertoPermitido(2000);
-
-        cuentas.add(cuenta1);
-        cuentas.add(cuenta2);
-        for( Cuenta c: cuentas)
-        {
+        ArrayList<Cuenta> cuentas = new ArrayList<>();
+        cuentas.add(CajaAhorroPEPE);
+        cuentas.add(ComitenteLUISITO);
+        cuentas.add(CuentaCorrienteJORGE);
+        for (Cuenta c : cuentas) {
             System.out.println(c.mostrarDatos());
         }
-
 
 
     }

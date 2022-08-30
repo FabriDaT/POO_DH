@@ -1,5 +1,5 @@
 public abstract class Cuenta {
-    private double saldo;
+    protected double saldo;
 
     public Cuenta(double saldo) {
         this.saldo = saldo;
