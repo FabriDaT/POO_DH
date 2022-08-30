@@ -23,9 +23,13 @@ public class CuentaCorriente extends  Cuenta{
     }
     public void depositar(double monto, String moneda)
     {
-        double auxiliar=monto;
-        if (moneda.equals("Dolar"))
-            auxiliar= auxiliar*150;
+        double auxiliar;
+        if (moneda.equals("Dolar")){
+            auxiliar= monto*150;
+        }else{
+            auxiliar=monto;
+        }
+
         //setSaldo(auxiliar+informarSaldo());
         super.depositar(auxiliar); // PREGUNTAR QUE HACE EL SUPER.DEPOSITAR ??
     }
