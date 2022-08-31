@@ -31,11 +31,11 @@ public class CuentaCorriente extends  Cuenta{
         }
 
         //setSaldo(auxiliar+informarSaldo());
-        super.depositar(auxiliar); // PREGUNTAR QUE HACE EL SUPER.DEPOSITAR ??
+        super.depositar(auxiliar); // PREGUNTAR QUE HACE EL SUPER.DEPOSITAR ?? llama al metodo "depositar" de la superClase
     }
 
     @Override
     public String mostrarDatos() {
-        return "Saldo " + informarSaldo() + "Monto Descubierto " + montoDescubierto;
+        return "CUENTA CORRIENTE --> Saldo " + informarSaldo() + " Monto Descubierto " + montoDescubierto;
     }
 }

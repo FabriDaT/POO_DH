@@ -19,6 +19,6 @@ public class CajaDeAhorro extends Cuenta {
         setSaldo(informarSaldo()*CajaDeAhorro.tasaDeInteres);
     }
     public String mostrarDatos(){
-        return "Saldo " + informarSaldo() + "Intereses " + CajaDeAhorro.tasaDeInteres;
+        return "CAJA DE AHORRO  ---> Saldo " + informarSaldo() + " Intereses " + CajaDeAhorro.tasaDeInteres;
     }
 }
