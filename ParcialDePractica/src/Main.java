@@ -16,8 +16,7 @@ public class Main {
          parcialMayo.vaArecuperar();
          parcialMayo.setNota(3.2);
          parcialMayo.vaArecuperar();
-         parcialMayo.setNota(1.2);
-         parcialMayo.vaArecuperar();
+
         System.out.println(parcialMayo.getCantidadReintentos());
         System.out.println(parcialMayo.esPosibleRecuperar(1));
 

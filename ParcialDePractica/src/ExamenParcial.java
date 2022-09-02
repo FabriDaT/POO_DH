@@ -31,14 +31,13 @@ public class ExamenParcial extends Examen{
         cantidadReintentos++;
     }
 
-    public  String esPosibleRecuperar(int numeroDeUnidad){
-        if ((numeroDeUnidad <= 3) && (cantidadReintentos < 3)){
+    public  String esPosibleRecuperar(int unidad){
+        if (  ((unidad <= 3) && (cantidadReintentos < 3)) || ((unidad > 3 )&& (cantidadReintentos < 2))  ){
 
             return "SI puede recuperar";
 
-        } else if ((numeroDeUnidad > 3 )&& (cantidadReintentos < 2)) {
-            return "No puede volver a recuperar el parcial";
-        } else return "jaja";
+        }
+        else return "no podra recuperar otra vez";
 
     }
 
