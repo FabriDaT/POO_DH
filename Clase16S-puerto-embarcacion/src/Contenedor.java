@@ -10,6 +10,9 @@ public class Contenedor implements Comparable<Contenedor>{
         this.paisProcedencia = paisProcedencia;
         this.materialesPeligrosos = materialesPeligrosos;
     }
+    public boolean tieneMaterialesPeligrosos(){
+        return materialesPeligrosos;
+    }
 
     public int getIdentificacion() {
         return identificacion;
