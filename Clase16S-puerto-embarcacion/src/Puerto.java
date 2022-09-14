@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Puerto {
     private String nombre;
@@ -11,20 +12,25 @@ public class Puerto {
     public void ingresarContenedor(Contenedor cont){
         this.contenedores.add(cont);
     }
-    public int calcularCantidadContenedoresPeligrosos(ArrayList<Contenedor> contenedores){
+    public int calcularCantidadContenedoresPeligrosos(){
         int contador=0;
 
-        for (int i = 0; i < contenedores.size(); i++) {
-            if (contenedores[i].)
+        for(Contenedor c:contenedores) {
+            if ((c.tieneMaterialesPeligrosos()) && (c.getPaisProcedencia().equals("Desconocido"))){
+                contador++;
+            }
         }
         return contador;
     }
     public void ordenar(){
-
-       return contenedores.sort;
+        Collections.sort(contenedores);  // SORT  ordena en orden ascendente
 }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Puerto{" +
+                "nombre='" + nombre + '\'' +
+                ", contenedores=" + contenedores.toString() +
+                '}';
+    }
 }
