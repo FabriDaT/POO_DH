@@ -1,5 +1,9 @@
 package com.company;
-
+/*
+* Una variable estática (static) en Java es una variable que pertenece a la clase en que fue declarada y se inicializa
+* solo una vez al inicio de la ejecución del programa, la característica principal de este tipo de variables es que se puede
+*  acceder directamente
+* con el nombre de la clase sin necesidad de crear un objeto*/
 public class EmpleadoFactory {
 
     private static EmpleadoFactory instancia;
@@ -7,7 +11,7 @@ public class EmpleadoFactory {
     // es una variable estatica que representa UNA instacia de la clase EmpleadoFactory
     // que va a ser la unica instancia que va a funcionar, aplico SINGLETON, una unica instancia de una clase
     // en este caso es una variable interna de la clase.
-    public static final String EMPLEADO_RELACION_DEPENDENCIA="ERD";
+    public static final String EMPLEADO_RELACION_DEPENDENCIA="ERD";  // final quiere decir que la variable sera una CONSTANTE, osea siempre con el mismo valor, siempre
     public static final String EMPLEADO_POR_HORA="EPH";
 
     private EmpleadoFactory()  // El constructor PRIVATE se utiliza cuando uso SINGLETON
