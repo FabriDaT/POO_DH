@@ -14,7 +14,9 @@ public class EmpleadoFactory {
     public static final String EMPLEADO_RELACION_DEPENDENCIA="ERD";  // final quiere decir que la variable sera una CONSTANTE, osea siempre con el mismo valor, siempre
     public static final String EMPLEADO_POR_HORA="EPH";
 
-    private EmpleadoFactory()  // El constructor PRIVATE se utiliza cuando uso SINGLETON
+    private EmpleadoFactory()  // El constructor PRIVATE se utiliza cuando uso SINGLETON ya que no quiero que sea publico
+            // porque estaria dejando que cualquiera pueda acceder y NO es el objetivo del  SINGLETON. SINGLETON
+            // solo me permite crear una sola instancia de esta clase, y nadie mas puede acceder a ella para instanciarla
     {
     }
     public static EmpleadoFactory getInstancia()
