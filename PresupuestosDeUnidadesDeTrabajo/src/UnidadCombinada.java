@@ -18,6 +18,10 @@ public class UnidadCombinada extends UnidadDeTrabajo{
         this.unidades = new ArrayList<>();
     }
 
+    public void setCoeficienteGlobal(double coeficienteGlobal) {
+        this.coeficienteGlobal = coeficienteGlobal;
+    }
+
     @Override
     public double calcularMonto() {
         double total=0.0;
@@ -28,10 +32,18 @@ public class UnidadCombinada extends UnidadDeTrabajo{
     }
 
     @Override
-    public String mostrar() {
+    public void mostrar() {
+        System.out.println(" UNIDADES COMBINADAS CHANGO ");
         for (UnidadDeTrabajo uni: unidades){
             uni.mostrar();
         }
         
+    }
+
+    public void setMontoMateriales(double montoMateriales) {
+        this.montoMateriales = montoMateriales;
+    }
+    public void addUnidadesTrabajo(UnidadDeTrabajo uni){
+        unidades.add(uni);
     }
 }

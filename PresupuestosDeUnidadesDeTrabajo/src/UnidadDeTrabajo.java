@@ -7,7 +7,7 @@ public abstract class UnidadDeTrabajo {
         this.descripcion = descripcion;
     }
     public abstract double calcularMonto();
-    public abstract String mostrar();
+    public abstract void mostrar();
 
     public String getNombre() {
         return nombre;

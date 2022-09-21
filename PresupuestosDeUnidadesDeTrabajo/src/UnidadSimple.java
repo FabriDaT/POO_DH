@@ -17,16 +17,20 @@ public class UnidadSimple extends UnidadDeTrabajo {
         if (this.cantidadDePersonas > 10){
 
             return (cantidadDePersonas * montoPorPersona) + (20 * (cantidadDePersonas * montoPorPersona) / 100);
-    } else
-        return  cantidadDePersonas*montoPorPersona;
+    } else return  cantidadDePersonas*montoPorPersona;
 
     }
 
     @Override
-    public String mostrar() {
-        return " Nombre: " + getNombre() + "Monto: " + calcularMonto();
+    public void mostrar() {
+        System.out.println("UNIDADE SIMPLE!!---  Nombre: " + getNombre() + "  Monto: " + calcularMonto());
     }
 
+    public void setMontoPorPersona(double montoPorPersona) {
+        this.montoPorPersona = montoPorPersona;
+    }
 
-
+    public void setCantidadDePersonas(int cantidadDePersonas) {
+        this.cantidadDePersonas = cantidadDePersonas;
+    }
 }
