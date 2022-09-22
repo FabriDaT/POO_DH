@@ -12,7 +12,7 @@ public class Test {
         segunUniSimple.setMontoPorPersona(90000.0);
         UnidadCombinada priUniCombinada= (UnidadCombinada)laFactoria.crearUnidadTrabajo("servicios generales","equipoELMASPIJA","akakakakak");
         priUniCombinada.setCoeficienteGlobal(3.0);
-        priUniCombinada.addUnidadesTrabajo(priUniSimple);
+        priUniCombinada.addUnidadesTrabajo(priUniSimple);>
         priUniCombinada.addUnidadesTrabajo(segunUniSimple);
         UnidadCombinada segunUniCombinada = (UnidadCombinada)laFactoria.crearUnidadTrabajo("servicios generales","AKAKAK","loremakak");
         segunUniCombinada.addUnidadesTrabajo(priUniSimple);
