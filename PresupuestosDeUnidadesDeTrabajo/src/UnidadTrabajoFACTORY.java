@@ -3,9 +3,7 @@ public class UnidadTrabajoFACTORY {
     //constastes
     public static final String MANTENIMIENTO="mantenimiento";
     public static final String LIMPIEZA="limpieza";
-    public static final String SERVICIOS_GENERALES="servicios generales";
-
-
+    public static final String SERVICIOS_GENERALES= "servicios generales";
     public static UnidadTrabajoFACTORY getInstancia() {
         if(instancia==null)
             instancia = new UnidadTrabajoFACTORY();
