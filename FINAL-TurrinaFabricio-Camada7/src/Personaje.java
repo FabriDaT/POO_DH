@@ -8,7 +8,7 @@ public class Personaje {
 
     public Personaje() {
     }
-    public adquirirHabilidad(){
+    public void adquirirHabilidad(){
 
     }
 

@@ -1,7 +1,7 @@
 public class Test {
     public static void main(String[] args) {
 
-        Personaje personaje = new Personaje("Mario");
+        Personaje personaje = new Personaje("Marito BadAss");
         HabilidadesFACTORY HabilidadesFactory = HabilidadesFACTORY.getInstancia();
         Simple habilidad1 = (Simple)HabilidadesFactory.crearHabilidades("HS","Saltar","salta");
         habilidad1.setPuntaje(7.5);
@@ -13,6 +13,7 @@ public class Test {
         habilidad3.setFactorMultiplicador(3);
         habilidad3.agregarHabilidades(habilidad1);
         habilidad3.agregarHabilidades(habilidad2);
+        habilidad3.calcularPuntaje();
 
     }
 }

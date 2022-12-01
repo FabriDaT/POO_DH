@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Combinada extends Habilidades {
     private int factorMultiplicador;
-    private ArrayList<Habilidades> habilidades;
+    public ArrayList<Habilidades> habilidades;
 
 
     public Combinada(String nombre, String descripcion, int factorMultiplicador) {
@@ -10,12 +10,15 @@ public class Combinada extends Habilidades {
         this.factorMultiplicador = factorMultiplicador;
         this.habilidades = new ArrayList<>();
     }
-
+    public Combinada(String nombre, String descripcion){
+        super(nombre, descripcion);
+        this.habilidades = new ArrayList<>();
+    }
     public void setFactorMultiplicador(int factorMultiplicador) {
         this.factorMultiplicador = factorMultiplicador;
     }
-    public void agregarHabilidades(Habilidades habilid){
-        habilidades.add(habilid);
+    public void agregarHabilidades(Habilidades habi){
+        habilidades.add(habi);
     }
 
     @Override
